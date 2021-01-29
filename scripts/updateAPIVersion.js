@@ -4,6 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 
+
 const read = (file) => fs.readFileSync(path.resolve(file)).toString();
 const write = (file, str) => fs.writeFileSync(path.resolve(file), str);
 const edit = (file, cb) => write(file, cb(read(file)));
